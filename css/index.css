@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, rgb(22, 80, 233), rgb(47, 168, 234));
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.links {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+  grid-gap: 1.5vh;
+  height: 60vh;
+  width: 60vh;
+  margin: 20vh auto;
+}
+
+.links a, .links div {
+  background-color: white;
+  border: 0.2vh solid #bbb;
+  border-radius: 6vh;
+  box-shadow: 0.4vh 0.4vh 2vh #000;
+}
+
+.github {
+  background-image: url("/imgs/gitHub.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.stackoverflow {
+
+}
+
+.linkedin {
+
+}
+
+.contact {
+
+}
+
+.contact:hover {
+  cursor: pointer;
+}
+
+@media only and screen(max-width: 300) {
+
+}
