@@ -120,7 +120,7 @@ div .background {
 }
 
 .links a:hover:before, .links div:hover:before {
-  animation: hover 0.5s;
+  animation: hover 0.4s;
   text-align: center;
   font-size: 4vh;
   position: absolute;
@@ -140,14 +140,15 @@ div .background {
 
 @media only screen and (max-width: 767px) and (orientation: portrait) {
   .links {
-    width: 80vw;
-    height: 80vw;
+    width: 60vw;
+    height: 60vw;
     margin: 7vw auto;
     grid-gap: 3vw;
   }
 
   .links a, .links div {
     border-radius: 6vw;
+    animation-duration: 0.1s;
   }
 
   @keyframes hover {
@@ -157,8 +158,8 @@ div .background {
   }
 
   .links a:hover:before, .links div:hover:before {
-    font-size: 6vw;
-    line-height: 30vw;
+    font-size: 4vw;
+    line-height: 28.5vw;
   }
 
   .name {
