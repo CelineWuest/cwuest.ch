@@ -125,7 +125,7 @@ div .background {
   font-size: 4vh;
   position: absolute;
   display: inline;
-  line-height: 28.5vh;
+  line-height: 30vh;
   width: 100%;
   background-color: #eee;
   opacity: 0.9;
@@ -134,23 +134,40 @@ div .background {
 
 @keyframes hover {
   0% { height: 0; line-height: 0vh; }
-  70% { line-height: 31vh; }
-  100% { height: 100%; line-height: 28.5vh; }
+  70% { line-height: 32vh; }
+  100% { height: 100%; line-height: 30vh; }
 }
 
-@media (orientation : portrait) {
-
+@media only screen and (max-width: 767px) and (orientation: portrait) {
   .links {
-    height: 80vw;
     width: 80vw;
+    height: 80vw;
+    margin: 7vw auto;
+    grid-gap: 3vw;
   }
 
   .links a, .links div {
     border-radius: 6vw;
   }
 
-  .links a:hover:before, .links div:hover:before {
-    height: 30vw;
-    width: 30vw;
+  @keyframes hover {
+    0% { height: 0; line-height: 0vh; }
+    70% { line-height: 32vw; }
+    100% { height: 100%; line-height: 30vw; }
   }
+
+  .links a:hover:before, .links div:hover:before {
+    font-size: 6vw;
+    line-height: 30vw;
+  }
+
+  .name {
+    font-size: 6vw;
+  }
+
+  .name h1 {
+    text-shadow: 0.2vw 0.2vw 2vw #000;
+    margin: 10vh auto;
+  }
+
 }
