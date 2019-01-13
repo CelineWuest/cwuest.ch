@@ -13,6 +13,8 @@ body {
   margin: 0;
 }
 
+/* Name Header on Top of Website */
+
 .name {
   font-size: 4vh;
   margin: 0;
@@ -24,6 +26,8 @@ body {
   margin-top: 10vh;
   text-align: center;
 }
+
+/* Grid of Links */
 
 .links {
   display: grid;
@@ -138,6 +142,8 @@ div .background {
   100% { height: 100%; line-height: 30vh; }
 }
 
+/* Media Queries */
+
 @media only screen and (max-width: 767px) and (orientation: portrait) {
   .links {
     width: 60vw;
@@ -159,7 +165,7 @@ div .background {
 
   .links a:hover:before, .links div:hover:before {
     font-size: 4vw;
-    line-height: 28.5vw;
+    line-height: 30vw;
   }
 
   .name {
