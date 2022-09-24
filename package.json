@@ -1,16 +1,28 @@
 {
-  "name": "ownwebsite",
-  "version": "1.0.0",
-  "description": "My Website",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "ejs": "^2.6.1",
-    "express": "^4.16.4"
-  }
+	"name": "personalwebsite",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"eslint": "^8.16.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"prettier": "^2.6.2",
+		"prettier-plugin-svelte": "^2.7.0",
+		"sass": "^1.55.0",
+		"svelte": "^3.44.0",
+		"svelte-intersection-observer": "^0.10.0",
+		"svelte-preprocess": "^4.10.7",
+		"vite": "^3.1.0"
+	},
+	"type": "module",
+	"dependencies": {}
 }
