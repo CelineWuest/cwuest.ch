@@ -12,6 +12,7 @@
 	let fg1 = '#ebdbb2';
 	let fg2 = '#bdae93';
 	let fg3 = '#a89984';
+	let fg4 = '#a89984';
 
 	let element;
 
@@ -339,6 +340,7 @@
 
 	$fg2: #bdae93;
 	$fg3: #a89984;
+	$bg4: #7c6f64;
 
 	$font: 'Roboto Mono', monospace;
 
@@ -448,7 +450,7 @@
 			text-decoration: none;
 			&:hover {
 				text-decoration: underline;
-				text-decoration-color: $fg3;
+				text-decoration-color: $bg4;
 			}
 			p {
 				color: $fg3;
@@ -463,6 +465,28 @@
 		h1 {
 			margin: 20px 0;
 			margin-bottom: 0px;
+		}
+		h2 a {
+			color: inherit;
+			word-spacing: -50%;
+			&::after {
+				content: '';
+				mask: url('/box-arrow-up-right.svg') no-repeat 50% 50%;
+				mask-size: cover;
+				background-color: $fg2;
+				width: 16px;
+				height: 16px;
+				display: block;
+				position: relative;
+				left: 102%;
+				bottom: 70%;
+			}
+			&:hover {
+				text-decoration-color: $bg4;
+				&::after {
+					background-color: $bg4;
+				}
+			}
 		}
 	}
 
