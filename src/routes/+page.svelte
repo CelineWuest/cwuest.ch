@@ -9,10 +9,6 @@
 	let nameDuration = 1500;
 
 	let fg0 = '#fbf1c7';
-	let fg1 = '#ebdbb2';
-	let fg2 = '#bdae93';
-	let fg3 = '#a89984';
-	let fg4 = '#a89984';
 
 	let element;
 
@@ -168,7 +164,7 @@
 								xmlns="http://www.w3.org/2000/svg"
 								width={iconSize}
 								height={iconSize}
-								fill={fg1}
+								fill="currentColor"
 								viewBox="0 0 16 16"
 							>
 								<path
@@ -187,15 +183,14 @@
 								width={iconSize}
 								height={iconSize}
 								viewBox="0 0 32 37"
-								fill="none"
+								fill="currentColor"
 								xmlns="http://www.w3.org/2000/svg"
 							>
-								<path d="M26 33V24H30V37H0V24H4V33H26Z" fill={fg1} />
+								<path d="M26 33V24H30V37H0V24H4V33H26Z" fill="currentColor" />
 								<path
 									fill-rule="evenodd"
 									clip-rule="evenodd"
 									d="M21.5 0L18.8 2L28.7 15.3L31.4 13.3L21.5 0ZM26 18.4L13.3 7.8L15.4 5.3L28.1 15.9L26 18.4ZM9.1 15.2L24.1 22.2L25.5 19.2L10.5 12.2L9.1 15.2ZM23.0908 25.9902L23.7844 23.041L7.67993 19.687L7 23L23.0908 25.9902ZM23 30H7V27H23V30Z"
-									fill={fg1}
 								/>
 							</svg>
 							<p>StackOverflow</p>
@@ -210,7 +205,7 @@
 								xmlns="http://www.w3.org/2000/svg"
 								width={iconSize}
 								height={iconSize}
-								fill={fg1}
+								fill="currentColor"
 								viewBox="0 0 16 16"
 							>
 								<path
@@ -338,6 +333,7 @@
 <style lang="scss">
 	@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
+	$fg1: #ebdbb2;
 	$fg2: #bdae93;
 	$fg3: #a89984;
 	$bg4: #7c6f64;
@@ -405,7 +401,12 @@
 	}
 
 	section::after {
-		content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22white%22%20class%3D%22bi%20bi-chevron-down%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M1.646%204.646a.5.5%200%200%201%20.708%200L8%2010.293l5.646-5.647a.5.5%200%200%201%20.708.708l-6%206a.5.5%200%200%201-.708%200l-6-6a.5.5%200%200%201%200-.708z%22/%3E%3C/svg%3E');
+		content: '';
+		mask: url('/chevron-down.svg') no-repeat 50% 50%;
+		mask-size: cover;
+		background-color: white;
+		width: 64px;
+		height: 64px;
 		display: block;
 		position: absolute;
 		bottom: 0;
@@ -457,6 +458,10 @@
 				font-family: $font;
 				font-size: 0.75em;
 			}
+		}
+
+		svg {
+			color: $fg1;
 		}
 	}
 
