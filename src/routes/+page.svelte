@@ -14,6 +14,10 @@
 	let fg3 = '#a89984';
 
 	let element;
+
+	function yearsSince(dateString) {
+		return new Date(Date.now() - new Date(dateString)).getUTCFullYear() - 1970;
+	}
 </script>
 
 <div class="container">
@@ -219,12 +223,112 @@
 			</div>
 		</section>
 	</IntersectionObserver>
-	<section>
+
+	<section id="cv">
 		<h1>CV</h1>
-		<p>Under Construction</p>
+		<h2><a href="/cv.pdf">Open as PDF</a></h2>
+		<div class="cv-content">
+			<div class="personal-info">
+				<div class="info-header">
+					<img src="/favicon.png" alt="Portrait" />
+					<div class="info-facts">
+						<table>
+							<tr>
+								<td>Name</td>
+								<td>Dominic Wüst</td>
+							</tr>
+							<tr>
+								<td>Age</td>
+								<td>{yearsSince('02/12/2003')}</td>
+							</tr>
+							<tr>
+								<td>E-Mail</td>
+								<td><a href="mailto:dwuest@student.ethz.ch">dwuest@student.ethz.ch</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="info-body">
+					<div class="programming-languages">
+						<h3>Programming Languages</h3>
+						<p>Check <a href="#projects">Projects</a> to see what I made using those languages</p>
+						<ul>
+							<li>
+								<h4>Go</h4>
+								<p>1 year of experience</p>
+							</li>
+							<li>
+								<h4>Python</h4>
+								<p>{yearsSince('1/1/2017')} years of experience</p>
+							</li>
+							<li>
+								<h4>TypeScript &amp; JavaScript</h4>
+								<p>{yearsSince('1/1/2018')} years of experience</p>
+							</li>
+							<li>
+								<h4>Java</h4>
+								<p>{yearsSince('6/1/2017')} years of experience</p>
+							</li>
+							<p>General knowledge in: C, C++, Haskell, OCaml</p>
+						</ul>
+					</div>
+					<div class="technologies">
+						<h3>Technologies</h3>
+						<ul>
+							<li>
+								<h4>Docker</h4>
+								<p>TODO</p>
+							</li>
+							<li>
+								<h4>Kubernetes</h4>
+								<p>TODO</p>
+							</li>
+							<li>
+								<h4>gRPC</h4>
+								<p>TODO</p>
+							</li>
+							<li>
+								<h4>Ansible</h4>
+								<p>TODO</p>
+							</li>
+						</ul>
+					</div>
+					<div class="language">
+						<h3>Languages</h3>
+						<ul>
+							<li>
+								<h4>German</h4>
+								<p>Natively</p>
+							</li>
+							<li>
+								<h4>English</h4>
+								<p>Fluent</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="timeline">
+				<ul>
+					<li>
+						<h3>Summer 2021 - Present: VIS</h3>
+						<p>Association of Computer Science Students at ETH</p>
+						<p>Member of the Computer Infrastructure and Computer Application Team</p>
+					</li>
+					<li>
+						<h3>Summer 2020 - Present: ETH Zürich</h3>
+						<p>BSc Computer Science</p>
+					</li>
+					<li>
+						<h3>Summer 2017 - Summer 2020: Kantonsschule Baden</h3>
+						<p>Focus on Physics and Applied Mathematics</p>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</section>
 
-	<section>
+	<section id="projects">
 		<h1>My Projects</h1>
 		<p>Under Construction</p>
 	</section>
@@ -260,6 +364,7 @@
 		right: 0;
 		bottom: 0;
 		scroll-snap-type: y mandatory;
+		scroll-behavior: smooth;
 		overflow-y: scroll;
 		overflow-x: hidden;
 		background-color: #282828;
@@ -334,7 +439,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
-		width: 20%;
+		width: 400px;
 		height: 200px;
 		a {
 			display: flex;
@@ -349,6 +454,56 @@
 				color: $fg3;
 				font-family: $font;
 				font-size: 0.75em;
+			}
+		}
+	}
+
+	#cv {
+		justify-content: start;
+		h1 {
+			margin: 20px 0;
+			margin-bottom: 0px;
+		}
+	}
+
+	.cv-content {
+		display: grid;
+		grid-template-columns: 4fr 5fr;
+		column-gap: 50px;
+		width: 60%;
+		margin: 0 auto;
+
+		img {
+			height: 128px;
+		}
+	}
+
+	.info-header {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.info-facts table {
+		border-spacing: 0 0.65em;
+		td {
+			padding: 0 15px;
+		}
+	}
+
+	.info-body {
+		display: flex;
+		height: 60%;
+		flex-direction: column;
+		flex-wrap: wrap;
+		column-gap: 30px;
+
+		div {
+			width: 50%;
+			li {
+				h4,
+				p {
+					margin: 0;
+				}
 			}
 		}
 	}
