@@ -392,11 +392,14 @@
 			bottom: 0;
 			opacity: 0.2;
 		}
+		70% {
+			opacity: 0.05;
+		}
 		80% {
 			opacity: 0.05;
 		}
 		100% {
-			opacity: 0.05;
+			opacity: 0;
 		}
 	}
 
@@ -425,14 +428,14 @@
 		transform: translate(-50%, 15%);
 		animation-timing-function: ease-in-out;
 		animation-name: chevron;
-		animation-duration: 3000ms;
+		animation-duration: 5s;
 		animation-iteration-count: infinite;
 	}
 
 	section:last-child {
 		margin-bottom: 0;
 		&::after {
-			content: '';
+			display: none;
 		}
 	}
 
