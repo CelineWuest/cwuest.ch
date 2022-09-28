@@ -11,6 +11,7 @@
 	let fg0 = '#fbf1c7';
 
 	let element;
+	let cvElement;
 
 	function yearsSince(dateString) {
 		return new Date(Date.now() - new Date(dateString)).getUTCFullYear() - 1970;
@@ -220,109 +221,116 @@
 		</section>
 	</IntersectionObserver>
 
-	<section id="cv">
-		<h1>CV</h1>
-		<h2><a href="/cv.pdf">Open as PDF</a></h2>
-		<div class="cv-content">
-			<div class="personal-info">
-				<div class="info-header">
-					<img src="/favicon.png" alt="Portrait" />
-					<div class="info-facts">
-						<table>
-							<tr>
-								<td>Name</td>
-								<td>Dominic Wüst</td>
-							</tr>
-							<tr>
-								<td>Age</td>
-								<td>{yearsSince('02/12/2003')}</td>
-							</tr>
-							<tr>
-								<td>E-Mail</td>
-								<td><a href="mailto:dwuest@student.ethz.ch">dwuest@student.ethz.ch</a></td>
-							</tr>
-						</table>
+	<IntersectionObserver element={cvElement} let:intersecting={intersectingCv}>
+		<section bind:this={cvElement} id="cv">
+			<h1>CV</h1>
+			<h2><a href="/cv.pdf">Open as PDF</a></h2>
+			{#if intersectingCv}
+				<div in:fly={{ duration: 1000, x: 1000 }} class="cv-content">
+					<div class="personal-info">
+						<div class="info-header">
+							<img src="/favicon.png" alt="Portrait" />
+							<div class="info-facts">
+								<table>
+									<tr>
+										<td>Name</td>
+										<td>Dominic Wüst</td>
+									</tr>
+									<tr>
+										<td>Age</td>
+										<td>{yearsSince('02/12/2003')}</td>
+									</tr>
+									<tr>
+										<td>E-Mail</td>
+										<td><a href="mailto:dwuest@student.ethz.ch">dwuest@student.ethz.ch</a></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="info-body">
+							<div class="programming-languages">
+								<h3>Programming Languages</h3>
+								<p>
+									Check <a href="#projects">Projects</a> to see what I made using those languages
+								</p>
+								<ul>
+									<li>
+										<h4>Go</h4>
+										<p>1 year of experience</p>
+									</li>
+									<li>
+										<h4>Python</h4>
+										<p>{yearsSince('1/1/2017')} years of experience</p>
+									</li>
+									<li>
+										<h4>TypeScript &amp; JavaScript</h4>
+										<p>{yearsSince('1/1/2018')} years of experience</p>
+									</li>
+									<li>
+										<h4>Java</h4>
+										<p>{yearsSince('6/1/2017')} years of experience</p>
+									</li>
+									<p>General knowledge in: C, C++, Haskell, OCaml</p>
+								</ul>
+							</div>
+							<div class="technologies">
+								<h3>Technologies</h3>
+								<ul>
+									<li>
+										<h4>Docker</h4>
+										<p>TODO</p>
+									</li>
+									<li>
+										<h4>Kubernetes</h4>
+										<p>TODO</p>
+									</li>
+									<li>
+										<h4>gRPC</h4>
+										<p>TODO</p>
+									</li>
+									<li>
+										<h4>Ansible</h4>
+										<p>TODO</p>
+									</li>
+								</ul>
+							</div>
+							<div class="language">
+								<h3>Languages</h3>
+								<ul>
+									<li>
+										<h4>German</h4>
+										<p>Natively</p>
+									</li>
+									<li>
+										<h4>English</h4>
+										<p>Fluent</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="timeline">
+						<h3>Timeline</h3>
+						<ul>
+							<li>
+								<h3>Summer 2021 - Present: VIS</h3>
+								<p>Association of Computer Science Students at ETH</p>
+								<p>Member of the Computer Infrastructure and Computer Application Team</p>
+							</li>
+							<li>
+								<h3>Summer 2020 - Present: ETH Zürich</h3>
+								<p>BSc Computer Science</p>
+							</li>
+							<li>
+								<h3>Summer 2017 - Summer 2020: Kantonsschule Baden</h3>
+								<p>Focus on Physics and Applied Mathematics</p>
+							</li>
+						</ul>
 					</div>
 				</div>
-				<div class="info-body">
-					<div class="programming-languages">
-						<h3>Programming Languages</h3>
-						<p>Check <a href="#projects">Projects</a> to see what I made using those languages</p>
-						<ul>
-							<li>
-								<h4>Go</h4>
-								<p>1 year of experience</p>
-							</li>
-							<li>
-								<h4>Python</h4>
-								<p>{yearsSince('1/1/2017')} years of experience</p>
-							</li>
-							<li>
-								<h4>TypeScript &amp; JavaScript</h4>
-								<p>{yearsSince('1/1/2018')} years of experience</p>
-							</li>
-							<li>
-								<h4>Java</h4>
-								<p>{yearsSince('6/1/2017')} years of experience</p>
-							</li>
-							<p>General knowledge in: C, C++, Haskell, OCaml</p>
-						</ul>
-					</div>
-					<div class="technologies">
-						<h3>Technologies</h3>
-						<ul>
-							<li>
-								<h4>Docker</h4>
-								<p>TODO</p>
-							</li>
-							<li>
-								<h4>Kubernetes</h4>
-								<p>TODO</p>
-							</li>
-							<li>
-								<h4>gRPC</h4>
-								<p>TODO</p>
-							</li>
-							<li>
-								<h4>Ansible</h4>
-								<p>TODO</p>
-							</li>
-						</ul>
-					</div>
-					<div class="language">
-						<h3>Languages</h3>
-						<ul>
-							<li>
-								<h4>German</h4>
-								<p>Natively</p>
-							</li>
-							<li>
-								<h4>English</h4>
-								<p>Fluent</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="timeline">
-				<ul>
-					<li>
-						<h3>Summer 2021 - Present: VIS</h3>
-						<p>Association of Computer Science Students at ETH</p>
-						<p>Member of the Computer Infrastructure and Computer Application Team</p>
-					</li>
-					<li>
-						<h3>Summer 2020 - Present: ETH Zürich</h3>
-						<p>BSc Computer Science</p>
-					</li>
-					<li>
-						<h3>Summer 2017 - Summer 2020: Kantonsschule Baden</h3>
-						<p>Focus on Physics and Applied Mathematics</p>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</section>
+			{/if}
+		</section>
+	</IntersectionObserver>
 
 	<section id="projects">
 		<h1>My Projects</h1>
@@ -331,24 +339,27 @@
 </div>
 
 <style lang="scss">
-	@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
 
 	$fg1: #ebdbb2;
 	$fg2: #bdae93;
 	$fg3: #a89984;
+
+	$bg1: #3c3836;
 	$bg4: #7c6f64;
 
-	$font: 'Roboto Mono', monospace;
+	$monospace-font: 'Roboto Mono', monospace;
+	$sans-serif-font: 'Roboto', sans-serif;
 
 	h1 {
 		font-size: 3em;
 		color: $fg2;
-		font-family: $font;
+		font-family: $monospace-font;
 	}
 
 	h2 {
 		color: $fg2;
-		font-family: $font;
+		font-family: $monospace-font;
 	}
 
 	svg path {
@@ -455,7 +466,7 @@
 			}
 			p {
 				color: $fg3;
-				font-family: $font;
+				font-family: $monospace-font;
 				font-size: 0.75em;
 			}
 		}
@@ -467,9 +478,13 @@
 
 	#cv {
 		justify-content: start;
+		font-family: $sans-serif-font;
 		h1 {
 			margin: 20px 0;
 			margin-bottom: 0px;
+		}
+		a {
+			color: inherit;
 		}
 		h2 a {
 			color: inherit;
@@ -493,15 +508,23 @@
 				}
 			}
 		}
+		h3 {
+			font-weight: 900;
+		}
 	}
 
 	.cv-content {
 		display: grid;
 		grid-template-columns: 4fr 5fr;
 		column-gap: 50px;
-		width: 60%;
+		width: 70%;
+		height: 70%;
 		margin: 0 auto;
-
+		padding: 10px 30px;
+		border-radius: 10px;
+		background-color: $bg1;
+		box-shadow: -5px 5px 5px 4px rgba($color: black, $alpha: 0.5);
+		transition: box-shadow;
 		img {
 			height: 128px;
 		}
@@ -521,10 +544,10 @@
 
 	.info-body {
 		display: flex;
-		height: 60%;
 		flex-direction: column;
 		flex-wrap: wrap;
 		column-gap: 30px;
+		height: 55%;
 
 		div {
 			width: 50%;
@@ -535,5 +558,9 @@
 				}
 			}
 		}
+	}
+
+	.timeline h3 {
+		margin-top: 5px;
 	}
 </style>
