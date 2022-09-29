@@ -1,6 +1,6 @@
 <script>
 	import IntersectionObserver from 'svelte-intersection-observer';
-	import { quintOut } from 'svelte/easing';
+	import { quintOut, cubicOut } from 'svelte/easing';
 	import { fly, draw } from 'svelte/transition';
 
 	let iconSize = 100;
@@ -226,7 +226,7 @@
 			<h1>CV</h1>
 			<h2><a href="/cv.pdf">Open as PDF</a></h2>
 			{#if intersectingCv}
-				<div in:fly={{ duration: 1000, x: 1000 }} class="cv-content">
+				<div in:fly={{ duration: 800, x: 1500, easing: cubicOut }} class="cv-content">
 					<div class="personal-info">
 						<div class="info-header">
 							<img src="/favicon.png" alt="Portrait" />
