@@ -334,7 +334,38 @@
 
 	<section id="projects">
 		<h1>My Projects</h1>
-		<p>Under Construction</p>
+		<div class="projects-container">
+			<ul>
+				<li>
+					<img src="/favicon.png" alt="Golang Icon" />
+					<h3>Golang</h3>
+				</li>
+				<li>
+					<img src="/favicon.png" alt="Kubernetes Icon" />
+					<h3>Kubernetes</h3>
+				</li>
+				<li>
+					<img src="/favicon.png" alt="OCaml Icon" />
+					<h3>OCaml</h3>
+				</li>
+				<li>
+					<img src="/favicon.png" alt="Typescript Icon" />
+					<h3>Javascript / Typescript</h3>
+				</li>
+				<li>
+					<img src="/favicon.png" alt="Java Icon" />
+					<h3>Java</h3>
+				</li>
+				<li>
+					<img src="/favicon.png" alt="Python Icon" />
+					<h3>Python</h3>
+				</li>
+				<li>
+					<img src="/favicon.png" alt="Docker Icon" />
+					<h3>Docker</h3>
+				</li>
+			</ul>
+		</div>
 	</section>
 </div>
 
@@ -565,5 +596,31 @@
 
 	.timeline h3 {
 		margin-top: 5px;
+	}
+
+	.projects-container {
+		width: 70%;
+		overflow-y: scroll;
+		overflow-x: show;
+		ul {
+			margin: auto;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: baseline;
+			width: 100%;
+			padding: 0;
+			li {
+				width: 45%;
+				margin: 2% 2.5%;
+				box-sizing: border-box;
+				border: 5px solid $fg1;
+				background-color: $fg3;
+				padding: 10px;
+				border-radius: 50px;
+				display: flex;
+				flex-direction: row;
+			}
+		}
 	}
 </style>
