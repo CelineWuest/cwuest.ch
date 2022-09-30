@@ -483,16 +483,9 @@
 </div>
 
 <style lang="scss">
+	@use '../lib/vars.scss' as *;
+
 	@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
-
-	$fg1: #ebdbb2;
-	$fg2: #bdae93;
-	$fg3: #a89984;
-
-	$bg1: #3c3836;
-	$bg4: #7c6f64;
-
-	$blue: #458588;
 
 	$monospace-font: 'Roboto Mono', monospace;
 	$sans-serif-font: 'Roboto', sans-serif;
