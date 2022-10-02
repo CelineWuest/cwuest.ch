@@ -17,6 +17,31 @@
 	function yearsSince(dateString) {
 		return new Date(Date.now() - new Date(dateString)).getUTCFullYear() - 1970;
 	}
+
+	let transformMaxAngle = 10;
+	let transformShadowScale = 20;
+	let transformElement;
+
+	function rotate3d(event, node) {
+		let rect = node.getBoundingClientRect();
+
+		let xFrac = ((event.clientX - rect.x) / rect.width) * 2 - 1;
+		let yFrac = ((event.clientY - rect.y) / rect.height) * 2 - 1;
+
+		let dist = Math.sqrt(xFrac ** 2 + yFrac ** 2);
+
+		console.log(xFrac, yFrac);
+
+		node.style.transform = `rotate3d(${yFrac}, ${-xFrac}, 0, ${dist * transformMaxAngle}deg)`;
+		node.style.boxShadow = `${-xFrac * transformShadowScale}px ${
+			-yFrac * transformShadowScale
+		}px 5px 4px rgba(0, 0, 0, 0.5)`;
+	}
+
+	function reset3d(node) {
+		node.style.transform = `rotate3d(1, 1, 0, 0deg)`;
+		node.style.boxShadow = '0 0 5px 4px rgba(0, 0, 0, 0.5)';
+	}
 </script>
 
 <div class="container">
@@ -335,7 +360,12 @@
 
 	<section id="projects">
 		<h1>My Projects</h1>
-		<div class="projects-container">
+		<div
+			class="projects-container"
+			bind:this={transformElement}
+			on:mousemove={(e) => rotate3d(e, transformElement)}
+			on:mouseleave={() => reset3d(transformElement)}
+		>
 			<ul>
 				<li class="golang">
 					<ProjectComponent title="Golang" svgSrc="/golang.svg">
@@ -600,10 +630,11 @@
 		margin: 0 auto;
 		border-radius: 10px;
 		background-color: $bg1;
-		box-shadow: -5px 5px 5px 4px rgba($color: black, $alpha: 0.5);
+		box-shadow: 0 0 5px 4px rgba($color: black, $alpha: 0.5);
 		width: 70%;
 		height: 70%;
-
+		transition: transform 0.1s ease-in-out;
+		transition: box-shadow 0.1s;
 		ul {
 			position: relative;
 			padding: 0;
