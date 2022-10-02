@@ -2,6 +2,8 @@
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import { quintOut, cubicOut } from 'svelte/easing';
 	import { fly, draw } from 'svelte/transition';
+	import { setContext } from 'svelte';
+	import { writable } from 'svelte/store';
 	import ProjectComponent from './ProjectComponent.svelte';
 
 	let iconSize = 100;
@@ -18,6 +20,10 @@
 		return new Date(Date.now() - new Date(dateString)).getUTCFullYear() - 1970;
 	}
 
+	setContext('projectComponent', {
+		active: writable('')
+	});
+
 	let transformMaxAngle = 10;
 	let transformShadowScale = 20;
 	let transformElement;
@@ -30,18 +36,13 @@
 
 		let dist = Math.sqrt(xFrac ** 2 + yFrac ** 2);
 
-		console.log(xFrac, yFrac);
-
 		node.style.transform = `rotate3d(${yFrac}, ${-xFrac}, 0, ${dist * transformMaxAngle}deg)`;
 		node.style.boxShadow = `${-xFrac * transformShadowScale}px ${
 			-yFrac * transformShadowScale
 		}px 5px 4px rgba(0, 0, 0, 0.5)`;
 	}
 
-	function reset3d(node) {
-		node.style.transform = `rotate3d(1, 1, 0, 0deg)`;
-		node.style.boxShadow = '0 0 5px 4px rgba(0, 0, 0, 0.5)';
-	}
+	function reset3d(node) {}
 </script>
 
 <div class="container">
@@ -369,37 +370,37 @@
 			<ul>
 				<li class="golang">
 					<ProjectComponent title="Golang" svgSrc="/golang.svg">
-						<h3>tmp</h3>
+						<h3>Golang tmp</h3>
 					</ProjectComponent>
 				</li>
 				<li>
-					<ProjectComponent title="Kubernetes" svgSrc="/favicon.png">
-						<h3>tmp</h3>
+					<ProjectComponent title="Kubernetes" svgSrc="/k8s.svg">
+						<h3>Kubernetes tmp</h3>
 					</ProjectComponent>
 				</li>
 				<li>
-					<ProjectComponent title="OCaml" svgSrc="/favicon.png">
-						<h3>tmp</h3>
+					<ProjectComponent title="OCaml" svgSrc="/ocaml.svg">
+						<h3>OCaml tmp</h3>
 					</ProjectComponent>
 				</li>
 				<li>
-					<ProjectComponent title="Javascript / Typescript" svgSrc="/favicon.png">
-						<h3>tmp</h3>
+					<ProjectComponent title="Javascript / Typescript" svgSrc="/typescript.svg">
+						<h3>JS/TS tmp</h3>
 					</ProjectComponent>
 				</li>
 				<li>
-					<ProjectComponent title="Java" svgSrc="/favicon.png">
-						<h3>tmp</h3>
+					<ProjectComponent title="Java" svgSrc="/java.svg">
+						<h3>Java tmp</h3>
 					</ProjectComponent>
 				</li>
 				<li>
-					<ProjectComponent title="Python" svgSrc="/favicon.png">
-						<h3>tmp</h3>
+					<ProjectComponent title="Python" svgSrc="/python.svg">
+						<h3>Python tmp</h3>
 					</ProjectComponent>
 				</li>
 				<li>
-					<ProjectComponent title="Docker" svgSrc="/favicon.png">
-						<h3>tmp</h3>
+					<ProjectComponent title="Docker" svgSrc="/docker.svg">
+						<h3>Docker tmp</h3>
 					</ProjectComponent>
 				</li>
 			</ul>
