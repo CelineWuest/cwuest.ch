@@ -21,7 +21,7 @@
 	}
 
 	setContext('projectComponent', {
-		active: writable('')
+		active: writable('Golang')
 	});
 
 	let transformMaxAngle = 10;
@@ -374,7 +374,32 @@
 			<ul>
 				<li class="golang">
 					<ProjectComponent title="Golang" svgSrc="/golang.svg">
-						<h3>Golang tmp</h3>
+						<ul class="project-element golang-text">
+							<li>
+								<h3>
+									Alphie <a href="https://github.com/DominicWuest/Alphie" target="_blank"
+										><img alt="Project GitHub link" /></a
+									>
+								</h3>
+								<p>
+									A Discord bot made up of multiple microservices, mainly written in Go and
+									currently running on a cluster of four systems.
+								</p>
+								<p>Features include:</p>
+								<ul>
+									<li>Reliable uptime with Kubernetes</li>
+									<li>
+										Making clips of currently livestreaming ETH lectures to view them again later
+									</li>
+									<li>Random 2D image generation of a fluid or a ball bouncing around in a box</li>
+									<li>
+										Automatic TODO lists generated for course assignments, where students can
+										subscribe to preset schedules or add their own items
+									</li>
+									<li>Playing a game of Blackjack in a Discord chat</li>
+								</ul>
+							</li>
+						</ul>
 					</ProjectComponent>
 				</li>
 				<li>
@@ -408,6 +433,7 @@
 					</ProjectComponent>
 				</li>
 			</ul>
+			<div class="filler" />
 		</div>
 	</section>
 </div>
@@ -640,7 +666,9 @@
 		height: 70%;
 		transition: box-shadow 0.05s, transform 0.1s;
 		transform-style: preserve-3d;
-		ul {
+		display: flex;
+		flex-direction: column;
+		> ul {
 			position: relative;
 			padding: 0;
 			margin: 0;
@@ -650,15 +678,33 @@
 			width: 100%;
 			height: 50px;
 			border-bottom: 1px solid black;
-			li {
+			> li {
 				position: initial;
 				border-right: 1px solid black;
 				border-top-right-radius: 15px;
 				transition: box-shadow 100ms ease-in;
 				box-shadow: 2px 0 5px -1.75px black;
-				&:hover {
-					box-shadow: 5px -1px 5px -1px black;
-				}
+			}
+		}
+
+		.filler {
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.075);
+		}
+	}
+
+	.project-element {
+		font-family: $sans-serif-font;
+		font-size: 1.2em;
+		list-style-type: none;
+		padding: 0;
+		h3 {
+			margin-bottom: 20px;
+			font-size: 2em;
+			img {
+				content: url('/github.svg');
+				width: 28px;
+				height: auto;
 			}
 		}
 	}

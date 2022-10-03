@@ -64,14 +64,18 @@
 			margin: 0;
 			height: fit-content;
 		}
+		&:hover {
+			box-shadow: 5px -1px 5px -1px black;
+			border-top-right-radius: 15px;
+		}
 	}
 
 	.content {
 		position: absolute;
 		left: 0;
 		width: 100%;
-		padding: 10px;
 		box-sizing: border-box;
-		background-color: rgba(0, 0, 0, 0.1);
+		padding: 0 50px;
+		padding-bottom: 30px;
 	}
 </style>
