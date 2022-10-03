@@ -25,7 +25,8 @@
 	});
 
 	let transformMaxAngle = 10;
-	let transformShadowScale = 20;
+	let transformShadowScale = 10;
+	let insetTransformShadowScale = 10;
 	let transformElement;
 
 	function rotate3d(event, node) {
@@ -34,12 +35,15 @@
 		let xFrac = ((event.clientX - rect.x) / rect.width) * 2 - 1;
 		let yFrac = ((event.clientY - rect.y) / rect.height) * 2 - 1;
 
-		let dist = Math.sqrt(xFrac ** 2 + yFrac ** 2);
+		let dist = Math.sqrt(xFrac ** 2 + yFrac ** 2) / Math.sqrt(2);
 
 		node.style.transform = `rotate3d(${yFrac}, ${-xFrac}, 0, ${dist * transformMaxAngle}deg)`;
 		node.style.boxShadow = `${-xFrac * transformShadowScale}px ${
 			-yFrac * transformShadowScale
-		}px 5px 4px rgba(0, 0, 0, 0.5)`;
+		}px 5px 4px rgba(0, 0, 0, 0.5),
+		inset ${-xFrac * insetTransformShadowScale}px ${
+			-yFrac * insetTransformShadowScale
+		}px 20px 10px rgba(0, 0, 0, 0.125)`;
 	}
 
 	function reset3d(node) {}
@@ -634,8 +638,8 @@
 		box-shadow: 0 0 5px 4px rgba($color: black, $alpha: 0.5);
 		width: 70%;
 		height: 70%;
-		transition: transform 0.1s ease-in-out;
-		transition: box-shadow 0.1s;
+		transition: box-shadow 0.05s, transform 0.1s;
+		transform-style: preserve-3d;
 		ul {
 			position: relative;
 			padding: 0;
