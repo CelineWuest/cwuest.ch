@@ -344,16 +344,17 @@
 						<h3>Timeline</h3>
 						<ul>
 							<li>
-								<h3>Summer 2021 - Present: VIS</h3>
+								<h3>March 2022 - Present: VIS</h3>
+								<h4>October 2022 - Present: SysAdmin and Board Member</h4>
 								<p>Association of Computer Science Students at ETH</p>
 								<p>Member of the Computer Infrastructure and Computer Application Team</p>
 							</li>
 							<li>
-								<h3>Summer 2020 - Present: ETH Zürich</h3>
+								<h3>September 2020 - Present: ETH Zürich</h3>
 								<p>BSc Computer Science</p>
 							</li>
 							<li>
-								<h3>Summer 2017 - Summer 2020: Kantonsschule Baden</h3>
+								<h3>August 2017 - June 2020: Kantonsschule Baden</h3>
 								<p>Focus on Physics and Applied Mathematics</p>
 							</li>
 						</ul>
