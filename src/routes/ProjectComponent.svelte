@@ -17,7 +17,7 @@
 
 <div
 	on:click={click}
-	class="title-wrapper"
+	class="title-wrapper {clicked ? 'active' : ''}"
 	on:mouseenter={() => (hover = true)}
 	on:mouseleave={() => (hover = false)}
 >
@@ -40,15 +40,20 @@
 <style lang="scss">
 	@use '../lib/vars.scss' as *;
 
+	$ul-height: 50px;
+
 	.title-wrapper {
 		display: flex;
 		cursor: pointer;
-		height: 100%;
+		height: 50px;
 		margin: 0;
 		padding: 0 15px;
 		justify-content: center;
 		flex-direction: column;
 		position: relative;
+		border-top-right-radius: 15px;
+		border-top-left-radius: 15px;
+		background-color: inherit;
 		img {
 			position: absolute;
 			left: 50%;
@@ -66,7 +71,10 @@
 		}
 		&:hover {
 			box-shadow: 5px -1px 5px -1px black;
-			border-top-right-radius: 15px;
+		}
+		&.active {
+			height: 60px;
+			margin-top: calc($ul-height - 60px);
 		}
 	}
 
@@ -76,6 +84,7 @@
 		width: 100%;
 		box-sizing: border-box;
 		padding: 0 50px;
-		padding-bottom: 30px;
+		height: calc(100% - $ul-height); // 100% minus the height of the ul element of languages
+		overflow-y: scroll;
 	}
 </style>

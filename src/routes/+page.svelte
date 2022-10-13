@@ -415,12 +415,73 @@
 				</li>
 				<li>
 					<ProjectComponent title="Javascript / Typescript" svgSrc="/typescript.svg">
-						<h3>JS/TS tmp</h3>
+						<ul class="project-element ts-text">
+							<li>
+								<h3>
+									Alphie's Frontend
+									<a href="https://github.com/DominicWuest/Alphie" target="_blank"
+										><img alt="Project GitHub link" /></a
+									>
+								</h3>
+								<p>
+									Built with the Svelte framework. TypeScript was used for authentication and
+									displaying CDN content.
+								</p>
+							</li>
+							<li>
+								<h3>
+									Maturaarbeit (Graduation Project in High School)
+									<a href="https://github.com/DominicWuest/Maturaarbeit" target="_blank"
+										><img alt="Project GitHub link" /></a
+									>
+								</h3>
+								<p>
+									A website for students to learn coding and algorithms, ranging from the simple
+									Bubble Sort over DH key exchanges to hashing algorithms like SHA. With a built-in
+									Python interpreter to automatically correct coding exercises. Node.js was used for
+									the backend.
+								</p>
+								<p>Winner of the best Technological Graduation Project 2020 at Kanti Baden.</p>
+								<p>
+									Developed with two other students, where I was in charge of the main organization,
+									the whole backend and around half of the articles.
+								</p>
+								<p>
+									Currently hosted under <a target="_blank" href="https://csa.dwuest.com"
+										>csa.dwuest.com</a
+									>.
+								</p>
+							</li>
+							<li>
+								<h3>This website</h3>
+								<p>JavaScript was used for the animations.</p>
+							</li>
+						</ul>
 					</ProjectComponent>
 				</li>
 				<li>
 					<ProjectComponent title="Java" svgSrc="/java.svg">
-						<h3>Java tmp</h3>
+						<ul class="project-element java-text">
+							<li>
+								<h3>
+									Mandelbrot <a href="https://github.com/DominicWuest/Mandelbrot" target="_blank"
+										><img alt="Project GitHub link" /></a
+									>
+								</h3>
+								<p>
+									An interactive display of the Mandelbrot set, where the rendering is optimized
+									with parallel programming.
+								</p>
+							</li>
+							<li>
+								<h3>Multiple smaller Processing sketches, including</h3>
+								<ul>
+									<li>Game Of Life</li>
+									<li>A visualisation of Bubble Sort</li>
+									<li>Minesweeper</li>
+								</ul>
+							</li>
+						</ul>
 					</ProjectComponent>
 				</li>
 				<li>
@@ -496,7 +557,7 @@
 
 	section {
 		margin-bottom: 50px;
-		scroll-snap-align: start;
+		scroll-snap-align: center;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
@@ -669,8 +730,8 @@
 		transform-style: preserve-3d;
 		display: flex;
 		flex-direction: column;
+		position: relative;
 		> ul {
-			position: relative;
 			padding: 0;
 			margin: 0;
 			display: flex;
@@ -683,8 +744,11 @@
 				position: initial;
 				border-right: 1px solid black;
 				border-top-right-radius: 15px;
-				transition: box-shadow 100ms ease-in;
+				border-top-left-radius: 15px;
 				box-shadow: 2px 0 5px -1.75px black;
+				transition: box-shadow 100ms ease-in;
+				background-color: $bg1;
+				height: fit-content;
 			}
 		}
 
@@ -707,6 +771,9 @@
 				width: 28px;
 				height: auto;
 			}
+		}
+		a {
+			color: inherit;
 		}
 	}
 </style>
