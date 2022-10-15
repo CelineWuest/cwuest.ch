@@ -345,6 +345,7 @@
 							<li>
 								<h3>March 2022 - Present: VIS</h3>
 								<h4>October 2022 - Present: SysAdmin and Board Member</h4>
+								<h4>March 2022 - Present: Member of two Commissions (CAT & CIT)</h4>
 								<p>Association of Computer Science Students at ETH</p>
 								<p>Member of the Computer Infrastructure and Computer Application Team</p>
 							</li>
@@ -355,6 +356,14 @@
 							<li>
 								<h3>August 2017 - June 2020: Kantonsschule Baden</h3>
 								<p>Focus on Physics and Applied Mathematics</p>
+							</li>
+						</ul>
+						<h3>Awards</h3>
+						<ul>
+							<li>
+								<h3>2020: Best Technical Graduation Project at Kantonsschule Baden</h3>
+								<p>Yearly awarded to the best Technical Graduation Project</p>
+								<p>Awarded for the "CSAcademy" project</p>
 							</li>
 						</ul>
 					</div>
@@ -747,8 +756,42 @@
 		}
 	}
 
+	.timeline p {
+		margin: 10px 0;
+		&:last-of-type {
+			margin-bottom: 20px;
+		}
+	}
+
 	.timeline h3 {
 		margin-top: 5px;
+	}
+
+	.timeline h4 {
+		margin: 15px 0;
+		position: relative;
+		&::before {
+			content: '';
+			height: calc(50% + 30px);
+			transform: translateX(-50%);
+			bottom: 50%;
+			background-color: white;
+			width: 1px;
+			display: block;
+			position: absolute;
+			left: -11px;
+		}
+		&::after {
+			content: '';
+			height: 1px;
+			transform: translateY(-50%);
+			background-color: white;
+			width: 10px;
+			display: block;
+			position: absolute;
+			left: -11px;
+			top: 50%;
+		}
 	}
 
 	.projects-container {
