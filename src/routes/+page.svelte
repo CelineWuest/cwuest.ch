@@ -390,7 +390,8 @@
 								<ul>
 									<li>Reliable uptime with Kubernetes</li>
 									<li>
-										Making clips of currently livestreaming ETH lectures to view them again later
+										Creating clips of currently livestreaming ETH lectures on demand to view them
+										again later
 									</li>
 									<li>Random 2D image generation of a fluid or a ball bouncing around in a box</li>
 									<li>
@@ -454,7 +455,9 @@
 							</li>
 							<li>
 								<h3>This website</h3>
-								<p>JavaScript was used for the animations.</p>
+								<p>
+									JavaScript was used for the animations and the SvelteKit framwork for the backend.
+								</p>
 							</li>
 						</ul>
 					</ProjectComponent>
@@ -486,7 +489,31 @@
 				</li>
 				<li>
 					<ProjectComponent title="Python" svgSrc="/python.svg">
-						<h3>Python tmp</h3>
+						<ul class="project-element python-text">
+							<li>
+								<h3>Multiple Machine Learning Models</h3>
+								<p>
+									Within a course at ETH I created and trained five different models to predict data
+									using Pytorch, Tensorflow and SkLearn
+								</p>
+								<p>Datasets included:</p>
+								<ul>
+									<li>
+										The HOMO-LUMO gap of molecules which indicates a material's strength and
+										reactivity
+									</li>
+									<li>Pictures of food and their similarity to other foods</li>
+									<li>Medical emergencies and duration of hospital visits</li>
+								</ul>
+							</li>
+							<li>
+								<h3>Lots of smaller Scripts</h3>
+								<p>
+									From time to time I increase my productivity with the help of smaller Python
+									scripts to automate monotonous work.
+								</p>
+							</li>
+						</ul>
 					</ProjectComponent>
 				</li>
 				<li>
