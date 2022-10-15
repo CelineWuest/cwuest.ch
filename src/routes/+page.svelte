@@ -309,19 +309,18 @@
 								<ul>
 									<li>
 										<h4>Docker</h4>
-										<p>TODO</p>
+										<p>I have written multiple Dockerfiles for various microservices.</p>
 									</li>
 									<li>
 										<h4>Kubernetes</h4>
-										<p>TODO</p>
+										<p>
+											In my position as a SysAdmin at VIS I manage a sizable Kubernetes cluster and
+											a smaller, private one running on my home network on the side.
+										</p>
 									</li>
 									<li>
 										<h4>gRPC</h4>
-										<p>TODO</p>
-									</li>
-									<li>
-										<h4>Ansible</h4>
-										<p>TODO</p>
+										<p>gRPC is most often my choice for IPC on distributed systems.</p>
 									</li>
 								</ul>
 							</div>
@@ -710,6 +709,12 @@
 		img {
 			height: 128px;
 		}
+	}
+
+	.technologies p {
+		font-size: 0.8em;
+		font-weight: 700;
+		padding-bottom: 7px;
 	}
 
 	.info-header {
