@@ -413,16 +413,6 @@
 					</ProjectComponent>
 				</li>
 				<li>
-					<ProjectComponent title="Kubernetes" svgSrc="/k8s.svg">
-						<h3>Kubernetes tmp</h3>
-					</ProjectComponent>
-				</li>
-				<li>
-					<ProjectComponent title="OCaml" svgSrc="/ocaml.svg">
-						<h3>OCaml tmp</h3>
-					</ProjectComponent>
-				</li>
-				<li>
 					<ProjectComponent title="Javascript / Typescript" svgSrc="/typescript.svg">
 						<ul class="project-element ts-text">
 							<li>
@@ -522,11 +512,6 @@
 								</p>
 							</li>
 						</ul>
-					</ProjectComponent>
-				</li>
-				<li>
-					<ProjectComponent title="Docker" svgSrc="/docker.svg">
-						<h3>Docker tmp</h3>
 					</ProjectComponent>
 				</li>
 			</ul>
