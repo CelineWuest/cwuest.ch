@@ -255,7 +255,7 @@
 	<IntersectionObserver element={cvElement} let:intersecting={intersectingCv}>
 		<section bind:this={cvElement} id="cv">
 			<h1>CV</h1>
-			<h2><a href="/cv.pdf">Open as PDF</a></h2>
+			<h2><a data-sveltekit-prefetch href="/cv.pdf">Open as PDF</a></h2>
 			{#if intersectingCv}
 				<div in:fly={{ duration: 800, x: 1500, easing: cubicOut }} class="cv-content">
 					<div class="personal-info">
