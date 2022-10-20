@@ -417,6 +417,20 @@
 						<ul class="project-element ts-text">
 							<li>
 								<h3>
+									Companionwatch
+									<a href="https://github.com/DominicWuest/CompanionWatch" target="_blank"
+										><img alt="Project GitHub link" /></a
+									>
+								</h3>
+								<p>
+									A website where friends can watch YouTube videos together over the internet with
+									synced controls.
+								</p>
+								<p>This functionality was achieved by using WebSockets over a Node.js backend.</p>
+								<p>Currently hosted under <a href="https://cw.dwuest.com">cw.dwuest.com</a>.</p>
+							</li>
+							<li>
+								<h3>
 									Alphie's Frontend
 									<a href="https://github.com/DominicWuest/Alphie" target="_blank"
 										><img alt="Project GitHub link" /></a
@@ -446,9 +460,7 @@
 									the whole backend and around half of the articles.
 								</p>
 								<p>
-									Currently hosted under <a target="_blank" href="https://csa.dwuest.com"
-										>csa.dwuest.com</a
-									>.
+									Currently hosted under <a href="https://csa.dwuest.com">csa.dwuest.com</a>.
 								</p>
 							</li>
 							<li>
