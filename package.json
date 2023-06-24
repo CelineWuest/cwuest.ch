@@ -1,5 +1,5 @@
 {
-	"name": "personalwebsite",
+	"name": "dwuest.com",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
@@ -10,19 +10,18 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/adapter-node": "^1.0.0-next.95",
-		"@sveltejs/kit": "next",
-		"eslint": "^8.16.0",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-svelte3": "^4.0.0",
-		"prettier": "^2.6.2",
-		"prettier-plugin-svelte": "^2.7.0",
-		"sass": "^1.55.0",
-		"svelte": "^3.44.0",
+		"@sveltejs/adapter-node": "^1.2.4",
+		"@sveltejs/kit": "^1.20.5",
+		"eslint": "^8.43.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-svelte": "^2.31.1",
+		"prettier": "^2.8.8",
+		"prettier-plugin-svelte": "^2.10.1",
+		"sass": "^1.63.6",
+		"svelte": "^4.0.0",
 		"svelte-intersection-observer": "^0.10.0",
-		"svelte-preprocess": "^4.10.7",
-		"vite": "^3.1.0"
+		"svelte-preprocess": "^5.0.4",
+		"vite": "^4.3.9"
 	},
 	"type": "module",
 	"dependencies": {}
