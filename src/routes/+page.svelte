@@ -11,8 +11,11 @@
 	let startDelay = 0;
 	let duration = 1500;
 
+	let container;
 	let element;
 	let cvElement;
+
+	let yOffset;
 
 	function yearsSince(dateString) {
 		return new Date(Date.now() - new Date(dateString)).getUTCFullYear() - 1970;
@@ -47,9 +50,12 @@
 	function reset3d(node) {}
 </script>
 
-<div class="container">
+<div class="container" bind:this={container} on:scroll={() => (yOffset = container.scrollTop)}>
 	<IntersectionObserver {element} let:intersecting>
-		<section bind:this={element}>
+		<section
+			bind:this={element}
+			style="filter: brightness({100 - (yOffset / (element ? element.offsetHeight : 1)) * 50}%)"
+		>
 			<Name {intersecting} />
 			<h2>Developer with a Passion for Distributed Systems</h2>
 			<div class="social-media">
@@ -123,7 +129,17 @@
 	</IntersectionObserver>
 
 	<IntersectionObserver element={cvElement} let:intersecting={intersectingCv}>
-		<section bind:this={cvElement} id="cv">
+		<section
+			bind:this={cvElement}
+			id="cv"
+			style="filter: brightness({Math.min(
+				100 -
+					((yOffset - (cvElement ? cvElement.offsetHeight : 0)) /
+						(cvElement ? cvElement.offsetHeight : 1)) *
+						50,
+				100
+			)}%)"
+		>
 			<h1>CV</h1>
 			<h2><a data-sveltekit-prefetch href="/cv.pdf">Open as PDF</a></h2>
 			{#if intersectingCv}
@@ -426,12 +442,9 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		scroll-snap-type: y mandatory;
 		scroll-behavior: smooth;
 		overflow-y: scroll;
 		overflow-x: hidden;
-		background-color: #282828;
-		color: white;
 	}
 
 	@keyframes chevron {
@@ -459,14 +472,16 @@
 
 	section {
 		margin-bottom: 50px;
-		scroll-snap-align: center;
 		width: 100%;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		position: relative;
+		position: sticky;
+		top: 0;
+		background-color: #282828;
+		color: white;
 	}
 
 	section::after {
