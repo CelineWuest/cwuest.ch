@@ -63,13 +63,13 @@
 			{:else}
 				<ul>
 					<li>
-						<button on:click={parallax.scrollTo(1, {duration: 1000})}>Home</button>
+						<button on:click={parallax.scrollTo(1, { duration: 1000 })}>Home</button>
 					</li>
 					<li>
-						<button on:click={parallax.scrollTo(2, {duration: 1000})}>CV</button>
+						<button on:click={parallax.scrollTo(2, { duration: 1000 })}>CV</button>
 					</li>
 					<li>
-						<button on:click={parallax.scrollTo(3, {duration: 1000})}>Projects</button>
+						<button on:click={parallax.scrollTo(3, { duration: 1000 })}>Projects</button>
 					</li>
 				</ul>
 			{/if}
@@ -83,7 +83,7 @@
 				<button
 					on:click={() => {
 						menuOpen = false;
-						parallax.scrollTo(1, {duration: 1000});
+						parallax.scrollTo(1, { duration: 1000 });
 					}}
 				>
 					Home
@@ -93,7 +93,7 @@
 				<button
 					on:click={() => {
 						menuOpen = false;
-						parallax.scrollTo(2, {duration: 1000});
+						parallax.scrollTo(2, { duration: 1000 });
 					}}
 				>
 					CV
@@ -103,7 +103,7 @@
 				<button
 					on:click={() => {
 						menuOpen = false;
-						parallax.scrollTo(3, {duration: 1000});
+						parallax.scrollTo(3, { duration: 1000 });
 					}}
 				>
 					Projects
@@ -840,7 +840,8 @@
 
 	.projects-container {
 		margin: 0 auto;
-		border-radius: 10px;
+		margin-top: 50px;
+		border-radius: 0 0 10px 10px;
 		background-color: $bg1;
 		box-shadow: 0 0 5px 4px rgba($color: black, $alpha: 0.5);
 		width: 70%;
@@ -857,16 +858,13 @@
 			flex-direction: row;
 			list-style-type: none;
 			width: 100%;
-			height: 50px;
+			height: 500px;
+			margin-top: -500px;
+			align-items: flex-end;
 			border-bottom: 1px solid black;
+			overflow-x: auto;
 			> li {
 				position: initial;
-				border-right: 1px solid black;
-				border-top-right-radius: 15px;
-				border-top-left-radius: 15px;
-				box-shadow: 2px 0 5px -1.75px black;
-				transition: box-shadow 100ms ease-in;
-				background-color: $bg1;
 				height: fit-content;
 			}
 		}
@@ -874,6 +872,15 @@
 		.filler {
 			height: 100%;
 			background-color: rgba(0, 0, 0, 0.075);
+		}
+	}
+
+	@media screen and (max-width: 40em) {
+		.projects-container {
+			width: 90%;
+			// Disable 3D effect on mobile
+			transform: none !important;
+			box-shadow: none !important;
 		}
 	}
 

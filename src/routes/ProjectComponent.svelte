@@ -43,6 +43,12 @@
 	$ul-height: 50px;
 
 	.title-wrapper {
+		border-right: 1px solid black;
+		border-top-right-radius: 15px;
+		border-top-left-radius: 15px;
+		box-shadow: 2px 0 5px -1.75px black;
+		transition: box-shadow 100ms ease-in;
+		background-color: $bg1;
 		display: flex;
 		cursor: pointer;
 		height: 50px;
@@ -53,7 +59,6 @@
 		position: relative;
 		border-top-right-radius: 15px;
 		border-top-left-radius: 15px;
-		background-color: inherit;
 		img {
 			position: absolute;
 			left: 50%;
@@ -68,6 +73,7 @@
 			font-family: $sans-serif-font;
 			margin: 0;
 			height: fit-content;
+			white-space: nowrap;
 		}
 		&:hover {
 			box-shadow: 5px -1px 5px -1px black;
@@ -79,12 +85,20 @@
 	}
 
 	.content {
+		word-wrap: break-word;
 		position: absolute;
 		left: 0;
 		width: 100%;
 		box-sizing: border-box;
 		padding: 0 50px;
-		height: calc(100% - $ul-height); // 100% minus the height of the ul element of languages
+		padding-bottom: 15px;
+		height: 100%;
 		overflow-y: scroll;
+	}
+
+	@media screen and (max-width: 40em) {
+		.content {
+			padding: 0 25px;
+		}
 	}
 </style>
