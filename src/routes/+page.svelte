@@ -132,7 +132,10 @@
 				<h1>CV</h1>
 				<h2><a data-sveltekit-prefetch href="/cv.pdf">Open as PDF</a></h2>
 				{#if nameProgress >= 0.1 && progress < 1}
-					<div in:fly={{ duration: 800, x: 1500, easing: cubicOut }} class="cv-content">
+					<div
+						in:fly={{ duration: 800, x: -window.innerWidth, easing: cubicOut }}
+						class="cv-content"
+					>
 						<div class="personal-info">
 							<div class="info-header">
 								<img src="/favicon.png" alt="Portrait" />
