@@ -48,10 +48,28 @@
 	}
 
 	function reset3d(node) {}
+
+	let parallax;
 </script>
 
+{#if ready}
+	<div class="page-links" in:fly={{ duration: 750, y: -100 }}>
+		<ul>
+			<li>
+				<h2 on:click={parallax.scrollTo(1)}>Home</h2>
+			</li>
+			<li>
+				<h2 on:click={parallax.scrollTo(2)}>CV</h2>
+			</li>
+			<li>
+				<h2 on:click={parallax.scrollTo(3)}>Projects</h2>
+			</li>
+		</ul>
+	</div>
+{/if}
+
 <div class="container">
-	<Parallax sections={3} config={{ stiffness: 1 }}>
+	<Parallax sections={3} config={{ stiffness: 1 }} bind:this={parallax}>
 		<StickyLayer
 			offset={{ bottom: 0, top: 0 }}
 			let:progress
@@ -432,6 +450,47 @@
 
 <style lang="scss">
 	@use '../lib/vars.scss' as *;
+
+	.page-links {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+
+		ul {
+			list-style: none; /* Remove default bullets */
+			li::before {
+				content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+				color: rgba(white, 0.5); /* Change the color */
+				font-weight: bold; /* If you want it to be bold */
+				display: inline-block; /* Needed to add space between the bullet and the text */
+				width: 1em; /* Also needed for space (tweak if needed) */
+				margin-left: -1em; /* Also needed for space (tweak if needed) */
+			}
+		}
+
+		ul::before {
+			content: '';
+			display: block;
+			position: absolute;
+			height: 80%;
+			width: 2px;
+			background-color: rgba(white, 0.2);
+			z-index: 99;
+			margin-left: -1em;
+			margin-top: -1em;
+			transform: translate(200%, 0);
+		}
+
+		h2 {
+			font-size: 1.8em;
+			margin: 10px 0;
+			color: rgba(white, 0.5);
+			text-decoration: underline;
+			cursor: pointer;
+			display: inline-block;
+		}
+	}
 
 	h1 {
 		font-size: 3em;
