@@ -63,13 +63,13 @@
 			{:else}
 				<ul>
 					<li>
-						<button on:click={parallax.scrollTo(1)}>Home</button>
+						<button on:click={parallax.scrollTo(1, {duration: 1000})}>Home</button>
 					</li>
 					<li>
-						<button on:click={parallax.scrollTo(2)}>CV</button>
+						<button on:click={parallax.scrollTo(2, {duration: 1000})}>CV</button>
 					</li>
 					<li>
-						<button on:click={parallax.scrollTo(3)}>Projects</button>
+						<button on:click={parallax.scrollTo(3, {duration: 1000})}>Projects</button>
 					</li>
 				</ul>
 			{/if}
@@ -83,7 +83,7 @@
 				<button
 					on:click={() => {
 						menuOpen = false;
-						parallax.scrollTo(1);
+						parallax.scrollTo(1, {duration: 1000});
 					}}
 				>
 					Home
@@ -93,7 +93,7 @@
 				<button
 					on:click={() => {
 						menuOpen = false;
-						parallax.scrollTo(2);
+						parallax.scrollTo(2, {duration: 1000});
 					}}
 				>
 					CV
@@ -103,7 +103,7 @@
 				<button
 					on:click={() => {
 						menuOpen = false;
-						parallax.scrollTo(3);
+						parallax.scrollTo(3, {duration: 1000});
 					}}
 				>
 					Projects
