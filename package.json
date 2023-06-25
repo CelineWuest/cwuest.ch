@@ -20,6 +20,7 @@
 		"sass": "^1.63.6",
 		"svelte": "^4.0.0",
 		"svelte-intersection-observer": "^0.10.0",
+		"svelte-parallax": "^0.6.0",
 		"svelte-preprocess": "^5.0.4",
 		"vite": "^4.3.9"
 	},
