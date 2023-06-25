@@ -60,7 +60,7 @@
 		>
 			<section>
 				<Name intersecting={ready && progress < 1} />
-				<h2>Developer with a Passion for Distributed Systems</h2>
+				<h2 class="name-info-header">Developer with a Passion for Distributed Systems</h2>
 				<div class="social-media">
 					<h2>Find me on</h2>
 					{#if ready && progress < 1}
@@ -520,8 +520,12 @@
 		height: 200px;
 	}
 
+	.name-info-header {
+		text-align: center;
+	}
+
 	.social-media {
-		padding-top: 100px;
+		padding-top: 5%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -533,7 +537,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
-		width: 400px;
+		width: 25%;
 		height: 200px;
 		a {
 			display: flex;
