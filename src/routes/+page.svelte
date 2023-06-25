@@ -509,7 +509,7 @@
 		animation-iteration-count: infinite;
 	}
 
-	section:last-child {
+	#projects {
 		margin-bottom: 0;
 		&::after {
 			display: none;
