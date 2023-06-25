@@ -12,6 +12,7 @@
 	let duration = 1500;
 
 	let nameProgress;
+	let cvProgress;
 
 	let ready;
 	onMount(() => (ready = true));
@@ -51,7 +52,12 @@
 
 <div class="container">
 	<Parallax sections={3} config={{ stiffness: 1 }}>
-		<StickyLayer offset={{ bottom: 0, top: 0 }} let:progress onProgress={(p) => (nameProgress = p)}>
+		<StickyLayer
+			offset={{ bottom: 0, top: 0 }}
+			let:progress
+			onProgress={(p) => (nameProgress = p)}
+			style="filter: brightness({Math.min(1.1 - nameProgress, 1)})"
+		>
 			<section>
 				<Name intersecting={ready && progress < 1} />
 				<h2>Developer with a Passion for Distributed Systems</h2>
@@ -127,7 +133,12 @@
 			</section>
 		</StickyLayer>
 
-		<StickyLayer offset={{ top: 1 }} let:progress>
+		<StickyLayer
+			offset={{ top: 1 }}
+			let:progress
+			onProgress={(p) => (cvProgress = p)}
+			style="filter: brightness({Math.min(1.1 - cvProgress, 1)})"
+		>
 			<section id="cv">
 				<h1>CV</h1>
 				<h2><a data-sveltekit-prefetch href="/cv.pdf">Open as PDF</a></h2>
