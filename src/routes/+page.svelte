@@ -121,7 +121,7 @@
 			onProgress={(p) => (nameProgress = p)}
 			style="filter: brightness({Math.min(1.1 - nameProgress, 1)})"
 		>
-			<section>
+			<section id="name">
 				<Name intersecting={ready && progress < 1} />
 				<h2 class="name-info-header">Developer with a Passion for Distributed Systems</h2>
 				<div class="social-media">
@@ -644,7 +644,7 @@
 		color: white;
 	}
 
-	section::after {
+	#name::after {
 		content: '';
 		mask: url('/chevron-down.svg') no-repeat 50% 50%;
 		mask-size: cover;
@@ -664,9 +664,6 @@
 
 	#projects {
 		margin-bottom: 0;
-		&::after {
-			display: none;
-		}
 	}
 
 	.name-container {
