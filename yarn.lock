@@ -1454,6 +1454,11 @@ svelte-eslint-parser@^0.31.0:
     postcss "^8.4.23"
     postcss-scss "^4.0.6"
 
+svelte-hamburgers@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/svelte-hamburgers/-/svelte-hamburgers-4.1.0.tgz#25a266a090c214b5f9688b1bd16f740fe588c257"
+  integrity sha512-uP3cHBhNRZDtg6PRcxaT5sOnF2o4uyHF37pqbq6ZN2zKekAHdvTn/wjiWv1arkYhnNZ+MzRgG7O/b+prN4zt5A==
+
 svelte-hmr@^0.15.2:
   version "0.15.2"
   resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.15.2.tgz#d2f6fc82e040f2734abd54cea5cbef46828f2538"
@@ -1463,6 +1468,11 @@ svelte-intersection-observer@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/svelte-intersection-observer/-/svelte-intersection-observer-0.10.0.tgz#6f9ff6c235ee80b761c169406e389ff15d1e8f3a"
   integrity sha512-GdOTMSrRpoBciMe+NbocsHOBvqKJ5OiL5H8Jz4mBoDGHba9VOI4oGeXAmMOmh8mi5gq95+0b0DVI+6alcQ7TCA==
+
+svelte-media-query@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/svelte-media-query/-/svelte-media-query-1.1.2.tgz#640bd764c670f0547634bd3b2ea5cbd6d5f8c195"
+  integrity sha512-wprqLjnTDhHsoCwCobMp06laiBb9sz8FeKQixEm9teS0tbPb2nmlzy3vlbDX5MPwNRyNML1/1SHmshQQnQ77+w==
 
 svelte-parallax@^0.6.0:
   version "0.6.0"

@@ -6,6 +6,8 @@
 	import ProjectComponent from './ProjectComponent.svelte';
 	import Name from './Name.svelte';
 	import { Parallax, StickyLayer } from 'svelte-parallax';
+	import { Hamburger } from 'svelte-hamburgers';
+	import MediaQuery from 'svelte-media-query';
 
 	let iconSize = 100;
 	let startDelay = 0;
@@ -50,19 +52,62 @@
 	function reset3d(node) {}
 
 	let parallax;
+	let menuOpen;
 </script>
 
-{#if ready}
-	<div class="page-links" in:fly={{ duration: 750, y: -100 }}>
+<MediaQuery query="(max-width: 50em)" let:matches>
+	{#if ready}
+		<div class="page-links" in:fly={{ duration: 750, y: -100 }}>
+			{#if matches}
+				<Hamburger bind:open={menuOpen} --color={'#fbf1c7'} />
+			{:else}
+				<ul>
+					<li>
+						<button on:click={parallax.scrollTo(1)}>Home</button>
+					</li>
+					<li>
+						<button on:click={parallax.scrollTo(2)}>CV</button>
+					</li>
+					<li>
+						<button on:click={parallax.scrollTo(3)}>Projects</button>
+					</li>
+				</ul>
+			{/if}
+		</div>
+	{/if}
+</MediaQuery>
+{#if menuOpen}
+	<div class="mobile-page-links" transition:fly={{ y: -window.innerHeight, duration: 500 }}>
 		<ul>
 			<li>
-				<h2 on:click={parallax.scrollTo(1)}>Home</h2>
+				<button
+					on:click={() => {
+						menuOpen = false;
+						parallax.scrollTo(1);
+					}}
+				>
+					Home
+				</button>
 			</li>
 			<li>
-				<h2 on:click={parallax.scrollTo(2)}>CV</h2>
+				<button
+					on:click={() => {
+						menuOpen = false;
+						parallax.scrollTo(2);
+					}}
+				>
+					CV
+				</button>
 			</li>
 			<li>
-				<h2 on:click={parallax.scrollTo(3)}>Projects</h2>
+				<button
+					on:click={() => {
+						menuOpen = false;
+						parallax.scrollTo(3);
+					}}
+				>
+					Projects
+				</button>
 			</li>
 		</ul>
 	</div>
@@ -482,9 +527,58 @@
 			transform: translate(200%, 0);
 		}
 
-		h2 {
+		button {
+			border: none;
+			font-weight: 600;
+			background: none;
 			font-size: 1.8em;
-			margin: 10px 0;
+			margin: 2px 0;
+			color: rgba(white, 0.5);
+			text-decoration: underline;
+			cursor: pointer;
+			display: inline-block;
+		}
+	}
+
+	.mobile-page-links {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 99;
+		background-color: rgba($bg1, 0.95);
+
+		ul {
+			list-style: none; /* Remove default bullets */
+			margin-left: 35px;
+			margin-top: 50px;
+			li::before {
+				content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+				color: rgba(white, 0.5); /* Change the color */
+				font-weight: bold; /* If you want it to be bold */
+				display: inline-block; /* Needed to add space between the bullet and the text */
+				width: 1em; /* Also needed for space (tweak if needed) */
+				margin-left: -1em; /* Also needed for space (tweak if needed) */
+			}
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				height: 10.25em;
+				width: 2px;
+				background-color: rgba(white, 0.2);
+				z-index: 99;
+				margin-left: -1em;
+				margin-top: -3.5em;
+				transform: translate(200%, 0);
+			}
+		}
+		button {
+			border: none;
+			background: none;
+			font-size: 1.8em;
+			margin: 2px 0;
 			color: rgba(white, 0.5);
 			text-decoration: underline;
 			cursor: pointer;
