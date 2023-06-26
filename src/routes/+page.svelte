@@ -592,6 +592,12 @@
 		font-family: $monospace-font;
 	}
 
+	@media screen and (max-width: 40em) {
+		h1 {
+			font-size: 2em;
+		}
+	}
+
 	h2 {
 		color: $fg2;
 		font-family: $monospace-font;
@@ -900,6 +906,15 @@
 		}
 		a {
 			color: inherit;
+		}
+	}
+
+	@media screen and (max-width: 40em) {
+		.project-element h3 {
+			font-size: 1.4em;
+			img {
+				width: 24px;
+			}
 		}
 	}
 </style>

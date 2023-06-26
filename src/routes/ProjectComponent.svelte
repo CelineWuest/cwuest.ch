@@ -99,6 +99,7 @@
 	@media screen and (max-width: 40em) {
 		.content {
 			padding: 0 25px;
+			padding-bottom: 15px;
 		}
 	}
 </style>
