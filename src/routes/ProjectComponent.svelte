@@ -59,7 +59,7 @@
 		position: relative;
 		border-top-right-radius: 15px;
 		border-top-left-radius: 15px;
-		z-index: 100;
+		z-index: -100;
 		img {
 			position: absolute;
 			left: 50%;

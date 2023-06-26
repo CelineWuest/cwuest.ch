@@ -53,7 +53,7 @@
 
 	let sectionHeightMultiplier = 1.3;
 
-	let innerHeight;
+	let outerHeight;
 
 	let parallax;
 	let menuOpen;
@@ -123,12 +123,12 @@
 	</div>
 {/if}
 
-<svelte:window bind:innerHeight />
+<svelte:window bind:outerHeight />
 
 <div class="container">
 	<Parallax
 		sections={3 * sectionHeightMultiplier}
-		sectionHeight={sectionHeightMultiplier * innerHeight}
+		sectionHeight={sectionHeightMultiplier * outerHeight}
 		config={{ stiffness: 1 }}
 		bind:this={parallax}
 	>
@@ -518,6 +518,10 @@
 <style lang="scss">
 	@use '../lib/vars.scss' as *;
 
+	:global(.sticky-layer) {
+		background-color: #282828;
+	}
+
 	.page-links {
 		position: fixed;
 		top: 0;
@@ -668,7 +672,6 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		background-color: #282828;
 		color: white;
 	}
 
