@@ -51,6 +51,10 @@
 
 	function reset3d(node) {}
 
+	let sectionHeightMultiplier = 1.3;
+
+	let innerHeight;
+
 	let parallax;
 	let menuOpen;
 </script>
@@ -63,13 +67,19 @@
 			{:else}
 				<ul>
 					<li>
-						<button on:click={parallax.scrollTo(1, { duration: 1000 })}>Home</button>
+						<button on:click={parallax.scrollTo(sectionHeightMultiplier, { duration: 1000 })}
+							>Home</button
+						>
 					</li>
 					<li>
-						<button on:click={parallax.scrollTo(2, { duration: 1000 })}>CV</button>
+						<button on:click={parallax.scrollTo(2 * sectionHeightMultiplier, { duration: 1000 })}
+							>CV</button
+						>
 					</li>
 					<li>
-						<button on:click={parallax.scrollTo(3, { duration: 1000 })}>Projects</button>
+						<button on:click={parallax.scrollTo(3 * sectionHeightMultiplier, { duration: 1000 })}
+							>Projects</button
+						>
 					</li>
 				</ul>
 			{/if}
@@ -83,7 +93,7 @@
 				<button
 					on:click={() => {
 						menuOpen = false;
-						parallax.scrollTo(1, { duration: 1000 });
+						parallax.scrollTo(sectionHeightMultiplier, { duration: 1000 });
 					}}
 				>
 					Home
@@ -93,7 +103,7 @@
 				<button
 					on:click={() => {
 						menuOpen = false;
-						parallax.scrollTo(2, { duration: 1000 });
+						parallax.scrollTo(2 * sectionHeightMultiplier, { duration: 1000 });
 					}}
 				>
 					CV
@@ -103,7 +113,7 @@
 				<button
 					on:click={() => {
 						menuOpen = false;
-						parallax.scrollTo(3, { duration: 1000 });
+						parallax.scrollTo(3 * sectionHeightMultiplier, { duration: 1000 });
 					}}
 				>
 					Projects
@@ -113,13 +123,24 @@
 	</div>
 {/if}
 
+<svelte:window bind:innerHeight />
+
 <div class="container">
-	<Parallax sections={3} config={{ stiffness: 1 }} bind:this={parallax}>
+	<Parallax
+		sections={3 * sectionHeightMultiplier}
+		sectionHeight={sectionHeightMultiplier * innerHeight}
+		config={{ stiffness: 1 }}
+		bind:this={parallax}
+	>
 		<StickyLayer
-			offset={{ bottom: 0, top: 0 }}
+			offset={{ top: 0, bottom: sectionHeightMultiplier }}
 			let:progress
-			onProgress={(p) => (nameProgress = p)}
-			style="filter: brightness({Math.min(1.1 - nameProgress, 1)})"
+			onProgress={(p) => {
+				console.log(p);
+				nameProgress = p;
+			}}
+			style="filter: brightness({Math.min(sectionHeightMultiplier * (1.1 - nameProgress), 1)})"
+			class="sticky-layer"
 		>
 			<section id="name">
 				<Name intersecting={ready && progress < 1} />
@@ -197,10 +218,11 @@
 		</StickyLayer>
 
 		<StickyLayer
-			offset={{ top: 1 }}
+			offset={{ top: sectionHeightMultiplier, bottom: 2 * sectionHeightMultiplier }}
 			let:progress
 			onProgress={(p) => (cvProgress = p)}
-			style="filter: brightness({Math.min(1.1 - cvProgress, 1)})"
+			style="filter: brightness({Math.min(sectionHeightMultiplier * (1.1 - cvProgress), 1)})"
+			class="sticky-layer"
 		>
 			<section id="cv">
 				<h1>CV</h1>
@@ -324,7 +346,7 @@
 			</section>
 		</StickyLayer>
 
-		<StickyLayer offset={{ top: 2 }}>
+		<StickyLayer offset={{ top: 2 * sectionHeightMultiplier }} class="sticky-layer">
 			<section id="projects">
 				<h1>My Projects</h1>
 				<div
