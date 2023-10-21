@@ -1,0 +1,4 @@
+baseURL = 'https://dwuest.com/'
+languageCode = 'en-us'
+title = 'Dominic Wüst'
+theme = 'blowfish'
