@@ -1,0 +1,3 @@
+[submodule "hugo/themes/blowfish"]
+	path = hugo/themes/blowfish
+	url = git@github.com:nunocoracao/blowfish.git
