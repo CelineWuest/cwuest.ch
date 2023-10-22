@@ -1,0 +1,15 @@
+.education {
+    &__item {
+        &:not(:first-child) {
+            padding-top: 1rem;
+        }
+    }
+
+    &__description {
+        white-space: pre;
+    }
+}
+
+#profile .section__content p {
+    white-space: pre-wrap;
+}
