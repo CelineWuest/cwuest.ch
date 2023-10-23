@@ -1,6 +1,6 @@
-[submodule "hugo/themes/blowfish"]
-	path = hugo/themes/blowfish
-	url = git@github.com:nunocoracao/blowfish.git
-[submodule "hugo/cv-site/themes/almeida-cv"]
-	path = hugo/cv-site/themes/almeida-cv
+[submodule "themes/blowfish"]
+	path = themes/blowfish
+	url = https://github.com/nunocoracao/blowfish
+[submodule "cv-site/themes/almeida-cv"]
+	path = cv-site/themes/almeida-cv
 	url = https://github.com/ineesalmeida/almeida-cv
