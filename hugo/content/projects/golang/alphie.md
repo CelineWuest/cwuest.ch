@@ -2,7 +2,7 @@
 title: "Alphie"
 date: 2023-10-21T23:47:15+02:00
 summary: "The best engineer in all of Koppai!"
-weight: 100
+weight: 70
 ---
 
 {{< github repo="DominicWuest/Alphie" >}}

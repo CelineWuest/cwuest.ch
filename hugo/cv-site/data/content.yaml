@@ -86,9 +86,9 @@ Skills:
       - Ansible
       - Git
       - Docker
+      - Kubernetes
   - Family: Misc
     Items:
-      - Kubernetes
       - LaTeX
       - VIM
 

@@ -1,7 +1,6 @@
 ---
 title: "Projects"
 date: 2023-10-21T18:25:52+02:00
-tags: ["projects"]
 cascade:
     showDate: false
     showReadingTime: false

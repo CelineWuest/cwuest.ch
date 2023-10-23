@@ -21,8 +21,19 @@ Dinkel is a fuzzer which automatically generates complex and valid [Cypher]() qu
 Cypher is a query language for graph databases made by [Neo4j]() and has seen widespread adoption.
 With dinkel, developers can easily test their Cypher implementations with very little setup necessary.
 
+Dinkel outperforms other state-of-the art fuzzers in the complexity of queries it can generate, as well as the amount of data dependencies it can induce within the queries.
+This allows dinkel to find many complex, previously unknown bugs.
+
+You can read my paper on dinkel [here](/dinkel_paper.pdf).
+
+### Results
+
+During my Bachelor's Thesis, I was able to find 53 unique bugs with dinkel over three graph database systems. 33 of these bugs have been fixed and an additional 11 have been confirmed.
+
+The systems I tested were [Neo4j](https://github.com/neo4j/neo4j), [RedisGraph](https://github.com/RedisGraph/RedisGraph) and [Apache AGE](https://github.com/apache/age).
+
 ### History
 
-Dinkel is the product of my Bachelor's thesis which I wrote in the [AST Lab at ETH]() under the supervision of [Zu-Ming Jiang]() ad [Zhendong Su]().
+Dinkel is the product of my Bachelor's thesis which I wrote in the [AST Lab at ETH](https://ast.ethz.ch/) under the supervision of [Zu-Ming Jiang](https://jzuming.github.io/) and [Prof. Zhendong Su](https://people.inf.ethz.ch/suz/).
 
-I started working on it in February of 2023 and released the 1.0 version in blah blah blah.
+I started working on it in February of 2023 and released the 1.0 version in, well, somewhen in 2024 hopefully.
