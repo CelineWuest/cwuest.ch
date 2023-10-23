@@ -1,0 +1,6 @@
+[submodule "themes/blowfish"]
+	path = themes/blowfish
+	url = https://github.com/nunocoracao/blowfish
+[submodule "cv-site/themes/almeida-cv"]
+	path = cv-site/themes/almeida-cv
+	url = https://github.com/ineesalmeida/almeida-cv
