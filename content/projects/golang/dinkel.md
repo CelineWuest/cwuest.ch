@@ -1,6 +1,6 @@
 ---
 title: "dinkel"
-date: 2023-10-21T17:53:02+02:00
+date: 2023-10-24T00:00:00+02:00
 summary: "A Powerful and Adaptable Cypher Fuzzer - My Bachelor's Thesis at ETH."
 weight: 50
 ---

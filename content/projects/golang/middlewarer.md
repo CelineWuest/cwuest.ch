@@ -1,6 +1,6 @@
 ---
 title: "middlewarer"
-date: 2023-10-21T23:47:03+02:00
+date: 2023-10-24T00:00:00+02:00
 summary: "A Go generator generating middleware frameworks for any interface."
 weight: 60
 ---

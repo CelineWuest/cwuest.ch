@@ -1,6 +1,6 @@
 ---
 title: "Processing Sketches (2018)"
-date: 2023-10-23T14:59:07+02:00
+date: 2023-10-22T14:59:07+02:00
 summary: "Multiple smaller processing sketches (2018)"
 weight: 150
 ---
