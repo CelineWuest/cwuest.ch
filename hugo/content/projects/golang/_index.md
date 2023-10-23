@@ -2,6 +2,7 @@
 title: "Go"
 date: 2023-10-21T22:07:19+02:00
 summary: "Ahh, yes! Go, the programming language with my favorite mascot."
+weight: 10
 ---
 
 Ahh, yes! Go, the programming language with my favorite mascot.

@@ -1,7 +1,8 @@
 ---
 title: "dinkel"
 date: 2023-10-21T17:53:02+02:00
-summary: "A Powerful and Adaptable Cypher Fuzzer - My Bachelor's Thesis at ETH"
+summary: "A Powerful and Adaptable Cypher Fuzzer - My Bachelor's Thesis at ETH."
+weight: 50
 ---
 
 {{< alert cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee" >}}
