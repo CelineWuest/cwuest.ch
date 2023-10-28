@@ -3,7 +3,7 @@ title: "Frogs Rule - Here's Why"
 date: 2023-10-28T13:38:30+02:00
 summary: "Ribbit :frog:"
 weight: 100
-tags: ['misc', 'biology', 'frogs']
+tags: ['biology', 'frogs', 'misc']
 ---
 
 {{< figure src="/blog/frogs-rule/frog.jpg" alt="A Cute Frog" caption="(wallpapersafari.com)" class="w-2/5 float-right text-center mt-0 mb-1" >}}
