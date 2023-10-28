@@ -1,6 +1,6 @@
 ---
 title: "Frogs Rule - Here's Why"
-date: 2023-10-25T09:06:30+02:00
+date: 2023-10-28T13:38:30+02:00
 summary: "Ribbit :frog:"
 weight: 100
 tags: ['misc', 'biology', 'frogs']
