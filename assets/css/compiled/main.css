@@ -1600,6 +1600,10 @@ select {
   margin-top: 2rem;
 }
 
+.mt-\[-1em\] {
+  margin-top: -1em;
+}
+
 .mt-\[0\.1rem\] {
   margin-top: 0.1rem;
 }
@@ -1622,6 +1626,10 @@ select {
 
 .flex {
   display: flex;
+}
+
+.table {
+  display: table;
 }
 
 .grid {
@@ -1720,6 +1728,10 @@ select {
   width: 33.333333%;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
 .w-12 {
   width: 3rem;
 }
@@ -1734,6 +1746,10 @@ select {
 
 .w-3 {
   width: 0.75rem;
+}
+
+.w-3\/5 {
+  width: 60%;
 }
 
 .w-36 {
@@ -1758,6 +1774,11 @@ select {
 
 .w-full {
   width: 100%;
+}
+
+.w-min {
+  width: -moz-min-content;
+  width: min-content;
 }
 
 .w-screen {
