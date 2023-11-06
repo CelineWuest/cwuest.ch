@@ -201,9 +201,11 @@ Other ways frogs defend themselves may include, among other methods, screaming, 
 
 ## Frogs in Research
 
+{{< figure src="/blog/frogs-rule/science-frog.png" class="text-center m-0 ml-5 float-right w-2/5" alt="An AI generated image of a frog with large eyes in a rainforest holding beakers" caption="A Frog Researcher" >}}
+
 Now unfortunately this section is not about frogs in labcoats, sorry if I got your hopes up.
-Though I would love to see that.  
-But what this section does discuss is the relevance of frogs in research!
+Though I did ask DALL-E to generate such an image, I hope you like it!  
+What this section discusses is the relevance of frogs in research!
 
 From the mid-19th century until the 1980s, frogs have been used to answer many questions in visual neuroscience.
 They have highly developed vision, a complex retina and display experimentally useful behaviours.
