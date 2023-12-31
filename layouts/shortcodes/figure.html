@@ -8,9 +8,10 @@
   {{ $href := .Get "href" }}
   {{ $class := .Get "class" }}
   {{ $nozoom := .Get "nozoom" | default false }}
+  {{ $imgclass := .Get "imgclass" | default "" }}
   {{ if findRE "^https?" $url.Scheme }}
     <figure {{ with $class }}class="{{ . }}"{{ end }}>
-      <img class="my-0 rounded-md" src="{{ $url.String }}" alt="{{ $altText }}" />
+      <img class="my-0 rounded-md {{ $imgclass }}" src="{{ $url.String }}" alt="{{ $altText }}" />
       {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
     </figure>
   {{ else }}
@@ -31,7 +32,7 @@
           />
           {{ else }}
           <img
-            class="my-0 rounded-md{{ if $nozoom }} nozoom{{ end }}"
+            class="my-0 rounded-md{{ if $nozoom }} nozoom{{ end }} {{ $imgclass }}"
             srcset="
             {{ (.Resize "330x").RelPermalink }} 330w,
             {{ (.Resize "660x").RelPermalink }} 660w,
@@ -46,7 +47,7 @@
       </figure>
     {{ else }}
       <figure {{ with $class }}class="{{ . }}"{{ end }}>
-        <img class="my-0 rounded-md{{ if $nozoom }} nozoom{{ end }}" src="{{ $url.String }}" alt="{{ $altText }}" />
+        <img class="my-0 rounded-md{{ if $nozoom }} nozoom{{ end }} {{ $imgclass }}" src="{{ $url.String }}" alt="{{ $altText }}" />
         {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
       </figure>
     {{ end }}

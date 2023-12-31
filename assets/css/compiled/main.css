@@ -1460,6 +1460,10 @@ select {
   margin-right: -100%;
 }
 
+.-mt-4 {
+  margin-top: -1rem;
+}
+
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -1600,6 +1604,10 @@ select {
   margin-top: 2rem;
 }
 
+.mt-\[-1em\] {
+  margin-top: -1em;
+}
+
 .mt-\[0\.1rem\] {
   margin-top: 0.1rem;
 }
@@ -1622,6 +1630,10 @@ select {
 
 .flex {
   display: flex;
+}
+
+.table {
+  display: table;
 }
 
 .grid {
@@ -1720,6 +1732,10 @@ select {
   width: 33.333333%;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
 .w-12 {
   width: 3rem;
 }
@@ -1734,6 +1750,10 @@ select {
 
 .w-3 {
   width: 0.75rem;
+}
+
+.w-3\/5 {
+  width: 60%;
 }
 
 .w-36 {
@@ -1756,8 +1776,17 @@ select {
   width: 30px;
 }
 
+.w-\[90\%\] {
+  width: 90%;
+}
+
 .w-full {
   width: 100%;
+}
+
+.w-min {
+  width: -moz-min-content;
+  width: min-content;
 }
 
 .w-screen {
@@ -4645,6 +4674,11 @@ body:has(#menu-controller:checked) {
 
 :is(.dark .dark\:opacity-60) {
   opacity: 0.6;
+}
+
+:is(.dark .dark\:invert-\[\.90\]) {
+  --tw-invert: invert(.90);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 :is(.dark .dark\:hover\:\!bg-primary-700:hover) {
