@@ -1,0 +1,4 @@
+.prose :where(h5):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    color: var(--tw-prose-headings);
+    font-weight: 500;
+}

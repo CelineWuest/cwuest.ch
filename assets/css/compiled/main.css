@@ -1460,6 +1460,10 @@ select {
   margin-right: -100%;
 }
 
+.-mt-4 {
+  margin-top: -1rem;
+}
+
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -1770,6 +1774,10 @@ select {
 
 .w-\[30px\] {
   width: 30px;
+}
+
+.w-\[90\%\] {
+  width: 90%;
 }
 
 .w-full {
@@ -4666,6 +4674,11 @@ body:has(#menu-controller:checked) {
 
 :is(.dark .dark\:opacity-60) {
   opacity: 0.6;
+}
+
+:is(.dark .dark\:invert-\[\.90\]) {
+  --tw-invert: invert(.90);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 :is(.dark .dark\:hover\:\!bg-primary-700:hover) {
