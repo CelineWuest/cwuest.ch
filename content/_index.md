@@ -32,7 +32,7 @@ Keeper of Rubber Duckies
     margin-top: -30px;
 ">
     <a href="https://github.com/DominicWuest" target="_blank">{{< icon "github" >}}</a>
-    <a href="https://www.linkedin.com/in/dominic-w%C3%BCst-095102179" target="_blank">{{< icon "linkedin" >}}</a>
+    <a href="https://www.linkedin.com/in/dominic-wuest" target="_blank">{{< icon "linkedin" >}}</a>
     <a href="https://stackoverflow.com/users/10639068/dwuest" target="_blank">{{< icon "stack-overflow" >}}</a>
     <a href="mailto:dwuest@student.ethz.ch" target="_blank">{{< icon "envelope" >}}</a>
 </div>
