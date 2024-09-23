@@ -10,11 +10,12 @@ date = 2023-10-21T20:01:47+02:00
   speed=45
   breakLines=false
   loop=true
+  randomize=true
 >}}
 Developer with a Passion for Distributed Systems
 Guardian of the Beep Boops
 Likes Go not only because of its Mascot
-Turns Mate into Highly Efficient Code
+Turns Caffeine into Highly Efficient Code
 Keeper of Rubber Duckies
 Currently NOT under investigation by the CIA
 {{< /typeit >}}
