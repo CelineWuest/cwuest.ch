@@ -16,6 +16,7 @@ Guardian of the Beep Boops
 Likes Go not only because of its Mascot
 Turns Mate into Highly Efficient Code
 Keeper of Rubber Duckies
+Currently NOT under investigation by the CIA
 {{< /typeit >}}
 
 </br>
