@@ -5,7 +5,7 @@ summary: "The Frontend of Koppai's best Engineer!"
 weight: 100
 ---
 
-{{< github repo="DominicWuest/Alphie" >}}
+{{< github repo="CelineWuest/Alphie" >}}
 
 For more infos about Alphie, check out the [Golang page](/projects/golang/alphie) on it!
 

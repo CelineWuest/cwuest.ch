@@ -5,7 +5,7 @@ summary: "Efficient Git Bisect using Docker Caching for Fast Repeated and Concur
 weight: 55
 ---
 
-{{< github repo="DominicWuest/biscepter" >}}
+{{< github repo="CelineWuest/biscepter" >}}
 
 ## What it is
 
@@ -58,7 +58,7 @@ This also means that networking has to be managed, requiring port mappings to be
 #### Caching
 
 In addition to this concurrency, biscepter also provides automatic caching of builds.
-If two issues are bisected simultaneously or one after another and they both rely on testing a certain commit, then this commit only needs to be built once, with the second test reusing the already built docker image.  
+If two issues are bisected simultaneously or one after another and they both rely on testing a certain commit, then this commit only needs to be built once, with the second test reusing the already built docker image.
 
 In addition to that, biscepter may also divert from the standard binary search implementation and choose to test a commit that is not in the middle of the remaining list to test.
 Biscepter does this, if it finds that the cost saved of running an already built, but suboptimally located, commit is non-negative.
@@ -67,6 +67,7 @@ This assumption then allows biscepter to easily calculate the expected number of
 For the curious, the exact formula for determining whether to use an offset, with the offset referring to the offset of the middle commit to the one under inspection, is:
 
 {{< katex >}}
+
 $$
  \begin{align*}
     bC &:= \text{Build cost (supplied by user for given repository)}\newline

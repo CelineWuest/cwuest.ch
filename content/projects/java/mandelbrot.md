@@ -5,7 +5,7 @@ summary: "An interactive display of the Mandelbrot set, where the rendering is o
 weight: 100
 ---
 
-{{< github repo="DominicWuest/Mandelbrot" >}}
+{{< github repo="CelineWuest/Mandelbrot" >}}
 
 This was my first try at parallel programming.
 I used Java threads to improve the performance of rendering the Mandelbrot set by splitting the pixel workloads between threads.

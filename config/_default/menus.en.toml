@@ -11,11 +11,6 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "CV"
-  url = "/cv/"
-  weight = 10
-
-[[main]]
   name = "Blog"
   pageRef = "blog"
   weight = 20

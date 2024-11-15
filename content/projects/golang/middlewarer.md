@@ -5,7 +5,7 @@ summary: "A Go generator generating middleware frameworks for any interface."
 weight: 60
 ---
 
-{{< github repo="DominicWuest/middlewarer" >}}
+{{< github repo="CelineWuest/middlewarer" >}}
 
 ## How it works
 

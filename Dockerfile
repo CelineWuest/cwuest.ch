@@ -6,7 +6,7 @@ RUN apk add hugo
 
 COPY . .
 
-RUN hugo && cd cv-site && hugo
+RUN hugo
 
 RUN cp -r public/* /usr/share/nginx/html
 

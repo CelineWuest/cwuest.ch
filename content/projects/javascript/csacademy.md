@@ -5,7 +5,7 @@ summary: "A Platform for Learning Computer Science Concepts - My Graduation Proj
 weight: 500
 ---
 
-{{< github repo="DominicWuest/Maturaarbeit" >}}
+{{< github repo="CelineWuest/Maturaarbeit" >}}
 
 A website for students to learn coding and algorithms, ranging from the simple
 Bubble Sort over DH key exchanges to hashing algorithms like SHA. With a
@@ -16,4 +16,4 @@ Developed with two other students, where I was in charge of the main
 organization, the whole backend and around half of the articles.
 
 - Winner of the best Technological Graduation Project 2020 at Kanti Baden.
-- Currently hosted under [csa.dwuest.com](https://csa.dwuest.com).
+- Currently hosted under [csa.cwuest.ch](https://csa.cwuest.ch).
