@@ -34,7 +34,7 @@ Currently NOT under investigation by the CIA
     margin-top: -30px;
 ">
     <a href="https://github.com/CelineWuest" target="_blank">{{< icon "github" >}}</a>
-    <a href="https://www.linkedin.com/in/dominic-wuest" target="_blank">{{< icon "linkedin" >}}</a>
-    <a href="https://stackoverflow.com/users/10639068/dwuest" target="_blank">{{< icon "stack-overflow" >}}</a>
-    <a href="mailto:dwuest@student.ethz.ch" target="_blank">{{< icon "envelope" >}}</a>
+    <a href="https://www.linkedin.com/in/celine-wuest" target="_blank">{{< icon "linkedin" >}}</a>
+    <a href="https://stackoverflow.com/users/10639068/cwuest" target="_blank">{{< icon "stack-overflow" >}}</a>
+    <a href="mailto:celine.wuest0+cwch@gmail.com" target="_blank">{{< icon "envelope" >}}</a>
 </div>
